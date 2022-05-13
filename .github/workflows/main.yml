@@ -1,6 +1,11 @@
 name: Flask-app workflow
 
-on: [push]
+# on: [push]
+on:
+  schedule:
+    - cron: '25 5 * * *'
+    - cron: '35 5 * * *'
+    - cron: '25 8 * * *'
 
 jobs:
   tests:
